@@ -1,0 +1,32 @@
+.modal {
+  background: #f2f2f2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 385px;
+  padding: 25px 25px 40px;
+  text-align: center;
+  .feed-form {
+    margin: 0 auto;
+  }
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba($color: #000000, $alpha: 0.5);
+}
+
+.modal__close {
+  position: absolute;
+}
+
+#consultation,
+#order {
+  display: none;
+}

@@ -1,0 +1,19 @@
+.consultation {
+  background: url(../../img/consultation/consultation__bg.jpg) center
+    center/cover no-repeat;
+  padding: 100px 0 110px;
+  color: $white-color;
+}
+
+.consultation__title {
+  text-transform: uppercase;
+  line-height: 1.8;
+  font-size: 36px;
+  max-width: 800px;
+}
+
+.consultation__subtitle {
+  margin-bottom: 35px;
+  font-size: 20px;
+  font-weight: 300;
+}

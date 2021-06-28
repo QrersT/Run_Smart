@@ -1,0 +1,11 @@
+@media (max-width: 800px) {
+  .advantage {
+    padding: 50px 0 60px;
+  }
+
+  .advantage__items {
+    flex-direction: column;
+    width: 270px;
+    margin: 0 auto; //правильно??
+  }
+}

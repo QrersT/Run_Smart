@@ -1,0 +1,28 @@
+@media (max-width: 1000px) {
+  .reviews {
+    padding: 40px 0 30px;
+  }
+}
+
+@media (max-width: 670px) {
+  .reviews__wrapper {
+    flex-direction: column;
+  }
+
+  .reviews__title {
+    font-size: 25px;
+  }
+
+  .reviews__item-img {
+    margin: 0 auto 20px;
+  }
+  .reviews__item-title,
+  .reviews__item-additionall,
+  .reviews__item-text {
+    text-align: center;
+  }
+
+  .reviews__item-text {
+    margin: 0 30px;
+  }
+}

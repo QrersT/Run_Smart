@@ -1,0 +1,23 @@
+@media (max-width: 1000px) {
+  .slider {
+    padding: 60px 0;
+  }
+}
+@media (max-width: 600px) {
+  .slider {
+    .slick-dots {
+      li {
+        button {
+          width: 16px;
+          height: 16px;
+        }
+      }
+      .slick-active {
+        button {
+          width: 19px;
+          height: 19px;
+        }
+      }
+    }
+  }
+}

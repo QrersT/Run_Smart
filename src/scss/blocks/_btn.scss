@@ -1,0 +1,17 @@
+.btn {
+  background: $red-color;
+  border: none;
+  padding: 7px 20px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  color: $white-color;
+  font-size: 12px;
+  &_main {
+    padding: 14px 42px;
+    font-size: 16px;
+  }
+  &_catalog {
+    font-size: 14px;
+    padding: 12px 41px;
+  }
+}

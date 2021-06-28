@@ -1,0 +1,35 @@
+.reviews {
+  padding: 60px 0 30px;
+}
+
+.reviews__title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  font-size: 30px;
+  color: $black-color;
+}
+
+.reviews__wrapper {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.reviews__item-img {
+  margin-right: 60px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.reviews__item-additionall {
+  color: #646464;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.reviews__item-text {
+  font-size: 16px;
+  color: $black-color;
+}

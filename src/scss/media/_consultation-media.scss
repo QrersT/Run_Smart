@@ -1,0 +1,27 @@
+@media (max-width: 800px) {
+  .consultation {
+    padding: 70px 0 80px;
+  }
+
+  .consultation__title {
+    font-size: 24px;
+  }
+  .consultation__subtitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 450px) {
+  .consultation__title {
+    font-size: 20px;
+  }
+
+  .feed-form {
+    max-width: 280px;
+  }
+
+  .btn_main {
+    max-width: 280px;
+    font-size: 14px;
+  }
+}

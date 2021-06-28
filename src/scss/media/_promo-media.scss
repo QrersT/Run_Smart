@@ -1,0 +1,52 @@
+@media (max-width: 700px) {
+  .promo__title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .promo__subtitle {
+    font-size: 18px;
+    margin: 10px 0 60px;
+    text-align: center;
+  }
+
+  .promo__items {
+    margin: 0 0 65px;
+  }
+
+  .promo__item {
+    margin: 0;
+  }
+
+  .promo__item-img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 450px) {
+  .promo {
+    padding: 100px 0 30px;
+  }
+
+  .promo__item {
+    width: 95px;
+  }
+
+  .promo__item-text {
+    font-size: 12px;
+  }
+
+  .promo__item-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .promo__title {
+    font-size: 26px;
+  }
+
+  .promo__subtitle {
+    font-size: 16px;
+  }
+}
