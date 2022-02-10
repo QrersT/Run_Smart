@@ -58,6 +58,32 @@
   padding: 20px 25px;
   border: 2px solid #e8e8e8;
   overflow: hidden;
+  &:hover {
+    .catalog__item-prices div {
+      animation-name: shake;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+    .catalog__item-prices s {
+      animation-name: hinge;
+      animation-duration: 4s;
+      animation-delay: 1s;
+      animation-iteration-count: 1;
+    }
+  }
+}
+.catalog__item-prices {
+  text-align: start;
+  s {
+    color: #555555;
+    display: inline-block;
+  }
+
+  div {
+    color: #050505;
+    font-weight: bold;
+    font-size: 20px;
+  }
 }
 
 .catalog__item-wrapper {
@@ -165,17 +191,4 @@
   height: 1px;
   max-width: 260px;
   margin: 20px 0;
-}
-
-.catalog__item-prices {
-  text-align: start;
-  s {
-    color: #555555;
-  }
-
-  div {
-    color: #050505;
-    font-weight: bold;
-    font-size: 20px;
-  }
 }

@@ -4,6 +4,9 @@
 @import "base/slick";
 @import "base/icons";
 
+/* @import "libs/animate"; */
+@import "libs/animate-usage";
+
 @import "blocks/container";
 @import "blocks/btn";
 @import "blocks/forms";
@@ -16,4 +19,11 @@
 @import "blocks/footer";
 @import "blocks/modal";
 @import "blocks/catalog.scss";
+@import "blocks/pageup";
+@import "blocks/animations";
+
+main {
+  overflow-x: hidden;
+}
+
 @import "media/media";

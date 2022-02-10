@@ -1,0 +1,32 @@
+@media (max-width: 1000px) {
+  .catalog__products_active {
+    justify-content: center;
+  }
+
+  .catalog__tabs {
+    span {
+      font-size: 15px;
+      margin-top: 5px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .catalog__tabs span {
+    font-size: 13px;
+    margin-top: 19px;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 414px) {
+  .catalog__tab_third span {
+    margin-top: 11px;
+  }
+}
+
+@media (max-width: 356px) {
+  .catalog__tab_first span {
+    margin-top: 14px;
+  }
+}
