@@ -1,15 +1,14 @@
 const gulp = require("gulp");
 const browserSync = require("browser-sync");
-const scss = require("gulp-sass");
+const scss = require("gulp-sass")(require("sass"));
 const rename = require("gulp-rename");
 const autoprefixer = require("gulp-autoprefixer");
-const cleanCss = require("gulp-clean-css");
-const htmlMin = require("gulp-htmlmin");
-const imageMin = require("gulp-imagemin");
-const { src } = require("gulp");
-const { watch } = require("browser-sync");
+const cleanCSS = require("gulp-clean-css");
+const imagemin = require("gulp-imagemin");
+const htmlmin = require("gulp-htmlmin");
 const fileInclude = require("gulp-file-include");
 
+// Static server
 gulp.task("server", function () {
   browserSync({
     server: {
@@ -32,7 +31,7 @@ gulp.task("styles", function () {
     )
     .pipe(autoprefixer())
     .pipe(
-      cleanCss({
+      cleanCSS({
         compatibility: "ie8",
       })
     )
@@ -44,8 +43,12 @@ gulp.task("html", function () {
   return gulp
     .src("src/*.html")
     .pipe(fileInclude())
-    .pipe(htmlMin({ collapseWhitespace: true }))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("dist/"));
+});
+
+gulp.task("scripts", function () {
+  return gulp.src("src/js/**/*.js").pipe(gulp.dest("dist/js"));
 });
 
 gulp.task("fonts", function () {
@@ -53,21 +56,17 @@ gulp.task("fonts", function () {
 });
 
 gulp.task("images", function () {
-  return gulp.src("src/img/**/*").pipe(imageMin()).pipe(gulp.dest("dist/img"));
+  return gulp.src("src/img/**/*").pipe(imagemin()).pipe(gulp.dest("dist/img"));
 });
 
 gulp.task("icons", function () {
   return gulp.src("src/icons/**/*").pipe(gulp.dest("dist/icons"));
 });
 
-gulp.task("js", function () {
-  return gulp.src("src/js/**/*.js").pipe(gulp.dest("dist/js"));
-});
-
 gulp.task("watch", function () {
   gulp.watch("src/scss/**/*.scss", gulp.parallel("styles"));
   gulp.watch("src/**/*.html").on("change", gulp.parallel("html"));
-  gulp.watch("src/js/**/*.js", gulp.parallel("js"));
+  gulp.watch("src/js/**/*.js", gulp.parallel("scripts"));
   gulp.watch("src/img/**/*", gulp.parallel("images"));
   gulp.watch("src/icons/**/*", gulp.parallel("icons"));
   gulp.watch("src/fonts/**/*", gulp.parallel("fonts"));
@@ -79,10 +78,10 @@ gulp.task(
     "watch",
     "server",
     "styles",
-    "js",
-    "images",
-    "icons",
+    "html",
+    "scripts",
     "fonts",
-    "html"
+    "images",
+    "icons"
   )
 );
